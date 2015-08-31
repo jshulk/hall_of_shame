@@ -12,15 +12,7 @@ function combineUrl(baseUrl, params) {
 }
 
 function _isEmpty(obj){
-    var isEmpty = true;
-    for( var key in obj){
-        if(obj.hasOwnProperty(key)){
-            isEmpty = false;
-            break;
-        }
-    }
-    
-    return isEmpty;
+    return Object.keys(obj).length === 0;
 }
 
 alert(combineUrl("http://www.google.com", {x: "a", y: "b"}));
